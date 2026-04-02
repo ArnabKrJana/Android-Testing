@@ -140,8 +140,6 @@ class MovieRepositoryImplTest {
         }
 
 
-
-
     @Test
     fun `getMovies emits Loading then Error when API throws IOException`() =
         runTest(testDispatcher) {
@@ -155,7 +153,7 @@ class MovieRepositoryImplTest {
             coEvery { dao.getMovies() } returns listOf(fakeLocalEntity)
 
             // Mock the service to completely fail and throw an exception (No Internet)
-            coEvery { service.getMovies() } throws  IOException()
+            coEvery { service.getMovies() } throws IOException()
 
             // Act & Assert
             repository.getMovies().test {

@@ -70,6 +70,7 @@ dependencies {
     testImplementation(libs.junit.junit)
     testImplementation(libs.junit.junit)
     testImplementation(libs.junit.junit)
+    testImplementation(libs.junit.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -122,4 +123,9 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
     testImplementation("io.mockk:mockk:1.13.8")
     testImplementation("app.cash.turbine:turbine:1.1.0")
+
+    // Use testImplementation for local JVM unit tests
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+    // Use androidTestImplementation for instrumented/UI tests
+    androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
 }
