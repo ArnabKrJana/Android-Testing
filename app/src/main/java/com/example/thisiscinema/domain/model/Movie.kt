@@ -8,3 +8,4 @@ data class Movie(
     val rating: String,
     val poster: String
 )
+
