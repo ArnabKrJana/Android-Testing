@@ -158,7 +158,7 @@ class HomeScreenTest {
         composeTestRule.onNodeWithTag("movie_list").assertIsDisplayed()
         composeTestRule.onAllNodesWithTag("movie_card").onFirst().assertIsDisplayed()
         composeTestRule.onNodeWithText("Inception").assertIsDisplayed()
-        // since all the card is not going ton fit inside screen so we have to scroll to the end of the list. But this time
+        // since all the card is not going to fit inside screen so we have to scroll to the end of the list. But this time
         // I want to check movie card by movie name is displayed or  by scrolling to that movie
         composeTestRule.onNodeWithTag("movie_list").performScrollToNode(hasText("Arrival"))
 
